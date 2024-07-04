@@ -23,12 +23,16 @@ body {
 
 body {
   font-size: 1.6rem;
-  background-image: linear-gradient(90deg, #6190E8, #A7BFE8);
-  padding-top: 5rem;
+  background-image: linear-gradient(90deg, #6190e8, #a7bfe8);
 }
 
 #calculator {
-  width: 50rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  max-width: 50rem;
   height: fit-content;
   margin: auto;
   padding: 2rem;
@@ -81,11 +85,23 @@ button:hover {
   width: 100%;
   height: 15rem;
   margin-top: 2rem;
-  border: .3rem solid #111;
-  border-radius: .5rem;
+  border: 0.3rem solid #111;
+  border-radius: 0.5rem;
   padding: 1rem;
 }
 
 #display > span {
   color: #808080;
+}
+
+@media (max-width: 460px) {
+  #calculator {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    text-wrap: nowrap;
+    text-align: center;
+  }
 }
